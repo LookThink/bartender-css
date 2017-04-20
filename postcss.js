@@ -2,30 +2,30 @@ var gulp         = require('gulp'),
     path         = require('path'),
     postcss      = require('gulp-postcss'),
     sourcemaps   = require('gulp-sourcemaps'),
-    autoprefixer = require('autoprefixer'),
-    cssnext      = require('postcss-cssnext')
+    cssnext      = require('postcss-cssnext'),
+    assets       = require('postcss-assets'),
+    colorguard   = require('gulp-colorguard'),
+    cssnano      = require('gulp-cssnano')
 ;
 
-var paths = {
-  src: path.join(config.root.src, config.tasks.css.src, '/**/*.{' + config.tasks.css.extensions + '}'),
-  dest: path.join(config.root.dest, config.tasks.css.dest)
-};
-
-// define postcss tasks
-var autoprefixer  = autoprefixer(config.tasks.css.postCss.autoprefixer),
-    cssnano       = cssnano(config.tasks.css.postCss.cssnano),
+// Define PostCSS tasks
+var cssnext       = cssnext(config.tasks.css.postcss.cssnext),
+    assets        = assets(config.tasks.css.postcss.assets),
+    colorguard    = colorguard(config.tasks.css.postcss.colorguard),
+    cssnano       = cssnano(config.tasks.css.postcss.cssnano),
     postcssConfig = [
-      autoprefixer,
+      cssnext,
+      assets,
+      colorguard,
       cssnano
     ]
 ;
 
 // CSS
 var processCSS = function() {
-  // Actual task
   return gulp.src(paths.src)
     .pipe(sourcemaps.init())
-    .pipe(postCss(postcssConfig))
+    .pipe(postcss(postcssConfig))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dest))
   ;
