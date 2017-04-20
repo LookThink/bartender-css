@@ -1,12 +1,12 @@
 css:
-  src: 'css'
-  dest: 'css'
+  src: # Set via Yeoman option
+  dest: # Set via Yeoman option
   postcss:
     # postcss-cssnext
     cssnext:
       browsers:
         - 'last 2 versions'
-        - 'IE 9'
+        - # Set via Yeoman option
       features:
         colorHwb: false
         colorGray: false
