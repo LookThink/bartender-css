@@ -1,0 +1,30 @@
+# CSS Task
+# css:
+#   src: 'scss'
+#   dest: 'css'
+#   postCss:
+#     autoprefixer:
+#       browsers:
+#         - 'last 2 versions'
+#         - 'IE 9'
+#     cssnano:
+#       convertValues: false
+#       zindex: false
+#   extensions:
+#     - 'sass'
+#     - 'scss'
+    # - 'css'
+
+css:
+  src: 'css'
+  dest: 'css'
+  postcss:
+    autoprefixer:
+      browsers:
+        - 'last 2 versions'
+        - 'IE 9'
+    cssnano:
+      convertValues: false
+      zindex: false
+  extensions:
+    - 'css'  
