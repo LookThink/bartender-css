@@ -6,11 +6,8 @@ css:
     cssnext:
       browsers:
         - 'last 2 versions'
-        - # Set via Yeoman option
-      features:
-        colorHwb: false
-        colorGray: false
-        colorHexAlpha: false
+        - '>= ie 9'
+        - '>= iOS 7'
     # postcss-assets
     assets:
       loadPaths:
@@ -25,3 +22,4 @@ css:
       zindex: false
   extensions:
     - 'css'
+    - 'scss'

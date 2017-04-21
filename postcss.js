@@ -1,7 +1,8 @@
 var gulp         = require('gulp'),
     path         = require('path'),
-    postcss      = require('gulp-postcss'),
+    sass         = require('gulp-sass'),
     sourcemaps   = require('gulp-sourcemaps'),
+    postcss      = require('gulp-postcss'),
     cssnext      = require('postcss-cssnext'),
     assets       = require('postcss-assets'),
     colorguard   = require('gulp-colorguard'),
@@ -25,6 +26,7 @@ var cssnext       = cssnext(config.tasks.css.postcss.cssnext),
 var processCSS = function() {
   return gulp.src(paths.src)
     .pipe(sourcemaps.init())
+    .pipe(sass())
     .pipe(postcss(postcssConfig))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest(paths.dest))

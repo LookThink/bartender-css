@@ -1,19 +1,18 @@
 # bartender-css
-PostCSS task for using Vanilla CSS (with future functionality) in Bartender.
-
-**If you will be using SCSS and _not_ vanilla CSS, use [bartender-scss]() instead.**
+CSS task for compiling SCSS and allowing future CSS syntax via PostCSS. Allows for Vanilla CSS as well.
 
 ---
 
 ## Plugins List
 
+- [path](https://www.npmjs.com/package/gulp-path)
+- [sass](https://www.npmjs.com/package/gulp-sass)
+- [sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
 - [postcss](https://github.com/postcss/postcss)
 - [cssnext](http://cssnext.io/) - Polyfills for future CSS syntax
 - [postcss-assets](https://github.com/borodean/postcss-assets) - Semi-automated asset management
 - [colorguard](https://github.com/SlexAxton/css-colorguard) - Check for colors that are too similar to eachother
 - [cssnano](http://cssnano.co/) - CSS minification
-- [path](https://www.npmjs.com/package/gulp-path)
-- [sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps)
 
 ---
 
@@ -21,14 +20,7 @@ PostCSS task for using Vanilla CSS (with future functionality) in Bartender.
 
 ### cssnext
 #### browsers
-Browserlist for cssnext is set to "last 2 versions" and "IE 9". While IE9 is farther back than our default contractual obligations, it doesn't hurt to include polyfills for that far back.
-
-#### features
-The following features are disabled:
-- `colorHwb`
-- `colorGray`
-- `colorHexAlpha`
-The reason behind this is they introduce new syntax to include colors that could confuse developers. May be re-added later if required but the output of these three features isn't worth the potential confusion. Just use RGB/RGBA by default.
+Browserlist for cssnext is set to "last 2 versions", ">= IE 9", and ">= iOS 7". This should accurately cover all problematic browser versions
 
 ### postcss-assets
 The following load paths are included by default:
