@@ -1,0 +1,35 @@
+{
+  "name": "bartender-css",
+  "version": "0.1.0",
+  "description": "CSS management task utilizing SCSS and PostCSS.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lookthink/bartender-css"
+  },
+  "author": "Greg Bruening <greg.b@lookthink.com>",
+  "contributors": [
+    {
+      "name": "Aaron Wentt",
+      "email": "aaron.w@lookthink.com"
+    }
+  ],
+  "keywords": [
+    "bartender",
+    "gulp",
+    "front end",
+    "css",
+    "scss"
+  ],
+  "dependencies": {
+    "cssnano": "^3.4.0",
+    "gulp": "^3.9.0",
+    "gulp-colorguard": "^1.1.0",
+    "gulp-postcss": "^6.0.1",
+    "gulp-sass": "^2.1.1",
+    "gulp-sourcemaps": "^2.4.1",
+    "path": "^0.12.7",
+    "postcss-assets": "^4.1.0",
+    "postcss-cssnext": "^2.10.0"
+  }
+}

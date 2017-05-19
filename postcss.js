@@ -6,7 +6,8 @@ var gulp         = require('gulp'),
     cssnext      = require('postcss-cssnext'),
     assets       = require('postcss-assets'),
     colorguard   = require('gulp-colorguard'),
-    cssnano      = require('gulp-cssnano')
+    cssnano      = require('gulp-cssnano'),
+
 ;
 
 // Define PostCSS tasks
@@ -18,6 +19,7 @@ var cssnext       = cssnext(config.tasks.css.postcss.cssnext),
       cssnext,
       assets,
       colorguard,
+      //  TODO - Only run cssnano in Prod, not Dev
       cssnano
     ]
 ;

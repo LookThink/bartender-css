@@ -20,7 +20,7 @@ CSS task for compiling SCSS and allowing future CSS syntax via PostCSS. Allows f
 
 ### cssnext
 #### browsers
-Browserlist for cssnext is set to "last 2 versions", ">= IE 9", and ">= iOS 7". This should accurately cover all problematic browser versions
+Browserlist for cssnext is set to "last 2 versions", ">= IE 9", and ">= iOS 7". This should accurately cover all supported legacy versions of popular browsers and devices.
 
 ### postcss-assets
 The following load paths are included by default:
